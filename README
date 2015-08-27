@@ -1,0 +1,27 @@
+Tools for using org-mode to write LaTeX
+
+This is my setup to write LaTeX files, retaining the rich features of org-mode.
+Usage: Write your LaTeX document in org-mode, using LaTeX code blocks for the actual code, e.g.
+* Chapter 1
+#+BEGIN_LaTeX
+\chapter{Unum}
+Nemo dolorem ipsum dolor sit amet.
+#+END_LaTeX
+** Section 1 (to finish by <2012-12-31 Mo>)
+Comment: If I don't finish by this date, it will be too late anyway...
+#+BEGIN_LaTeX
+\section{More}
+#+END_LaTeX
+*** Theorem 1
+#+BEGIN_LaTeX
+\begin{theorem}
+The world will end on 2012-12-31.
+\end{theorem}
+#+END_LaTeX
+*** TODO [#A] Proof						       :HIDE:
+#+BEGIN_LaTeX
+Not done yet.
+#+END_LaTeX
+You can hide blocks (including all subblocks) by using TODO-Keyword "NOPE" or the :HIDE: tag.
+
+When you are done writing, use "make". It will make a LaTeX file and compile it using ~pdflatex~.
